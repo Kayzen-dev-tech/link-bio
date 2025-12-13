@@ -50,12 +50,15 @@ Untuk mengaktifkan *Web-Stratum* ini di mesin lokal atau server Anda:
 ```bash
 > git clone [https://github.com/Kayzen-dev-tech/link-bio.git](https://github.com/Kayzen-dev-tech/link-bio.git)
 > cd link-bio
+```
 
 ### 2. Konfigurasi Identitas
 Buka file index.html dan modifikasi variabel berikut sesuai data entitas Anda:
+```html
 <div class="profile-img">...</div>
 
 <a href="YOUR_LINK" class="link-btn">...</a>
+```
 
 ### 3. Eksekusi
 Buka file index.html langsung di browser atau deploy menggunakan Vercel / Netlify / GitHub Pages.
