@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K Λ Y Z Ξ N — Link Bio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #050505;
+            --text-color: #e0e0e0;
+            --primary-cyan: #00f3ff;
+            --primary-purple: #bc13fe;
+            --glass: rgba(20, 20, 20, 0.8);
+            --border: 1px solid #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Share Tech Mono', monospace;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+        }
+
+        /* CRT Scanline Effect */
+        body::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 0;
+            position: relative;
+            z-index: 10;
+            background: rgba(10, 10, 10, 0.7);
+            min-height: 100vh;
+        }
+
+        /* --- PROFILE HEADER AREA --- */
+        .header-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed var(--primary-cyan);
+        }
+
+        .cover-img {
+            width: 100%;
+            height: 160px;
+            background-color: #222;
+            
+            /* --- LINK BACKGROUND --- */
+            background-image: url('https://pixhost.to/show/10844/670704557_background.jpg'); 
+            
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .cover-img::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+        }
+
+        .profile-content {
+            padding: 0 20px;
+            text-align: center;
+            margin-top: -60px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid var(--bg-color);
+            box-shadow: 0 0 15px var(--primary-cyan);
+            object-fit: cover;
+            
+            /* --- LINK PROFILE --- */
+            background-image: url('https://pixhost.to/show/10844/670704555_profile.jpg'); 
+            
+            background-size: cover;
+            background-position: center;
+            margin: 0 auto 15px auto;
+            background-color: black;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            color: var(--primary-cyan);
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0px var(--primary-purple);
+            margin-bottom: 5px;
+        }
+
+        .role {
+            font-size: 0.85rem;
+            color: #aaa;
+            background: rgba(188, 19, 254, 0.1);
+            border: 1px solid var(--primary-purple);
+            display: inline-block;
+            padding: 2px 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        .bio-desc {
+            font-size: 0.8rem; 
+            color: #ddd;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content-body {
+            padding: 0 20px 40px 20px;
+        }
+
+        .divider {
+            text-align: center;
+            color: var(--primary-purple);
+            font-size: 0.8rem;
+            margin: 20px 0;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--primary-cyan);
+            padding: 15px;
+            margin-bottom: 15px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+            background: rgba(0, 243, 255, 0.05);
+        }
+
+        .box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 5px; height: 100%;
+            background-color: var(--primary-cyan);
+        }
+
+        .box h3 {
+            color: var(--primary-cyan);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box p {
+            font-size: 0.85rem;
+            color: #ccc;
+            line-height: 1.4;
+        }
+
+        .price {
+            color: var(--primary-purple);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .benefit {
+            margin-top: 5px;
+            font-size: 0.75rem !important;
+            color: #888 !important;
+            border-left: 2px solid #444;
+            padding-left: 8px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background: black;
+            border: 1px solid var(--primary-purple);
+            color: white;
+            padding: 12px 20px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .link-btn:hover {
+            background: var(--primary-purple);
+            color: black;
+            box-shadow: 0 0 15px var(--primary-purple);
+            transform: translateX(5px);
+        }
+
+        .footer-status {
+            margin-top: 30px;
+            font-size: 0.7rem;
+            color: var(--primary-cyan);
+            opacity: 0.7;
+            text-align: left;
+            border-top: 1px dashed #444;
+            padding-top: 10px;
+        }
+
+        .blink { animation: blinker 1s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        .glitch:hover { animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header-wrapper">
+            <div class="cover-img"></div> 
+            
+            <div class="profile-content">
+                <div class="profile-img"></div>
+                
+                <h1 class="glitch">⫷⫸ K Λ Y Z Ξ N &nbsp; I Z ∪ M I ⫷⫸</h1>
+                <div class="role">XENOTECH SYNTH-ENGINEER</div>
+                <p class="bio-desc">
+                    Wielder of Semi-Sentient Code & Outer-Layer Logic Structures.<br>
+                    Forging paths through the digital veil.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-body">
+            
+            <div class="divider">══════ ≛ SYSTEM – MANIFEST ≛ ══════</div>
+
+            <div class="box" style="border-color: #555;">
+                <p>⦿ <strong>WEB-FORGΞ:</strong> Fabricating Web-Stratum Layers.</p>
+                <p>⦿ <strong>SYN–MIND AUTOMATA:</strong> Designing adaptive automaton scripts.</p>
+                <p>⦿ <strong>QNΤM–SIGIL:</strong> Identity constructs & quantum identifiers.</p>
+            </div>
+
+            <div class="divider">══════ ≛ MAIN – SERVICES ≛ ══════</div>
+
+            <div class="box">
+                <h3>Fix Error Script Bot <span class="price">[Rp 15k - 50k]</span></h3>
+                <p>Diagnosa & perbaikan bug Node.js / Baileys.</p>
+                <p class="benefit">+ Stabil, Log Trace, Backup included.</p>
+            </div>
+
+            <div class="box">
+                <h3>Rename Script Bot <span class="price">[Rp 5.000+]</span></h3>
+                <p>Rebranding nama bot, watermark & author.</p>
+                <p class="benefit">+ Custom Name, Watermark Team/Personal.</p>
+            </div>
+
+            <div class="box">
+                <h3>Tambah Fitur Bot <span class="price">[Start Rp 10k]</span></h3>
+                <p>Integrasi AI, Downloader, Fun Menu, dll.</p>
+                <p class="benefit">+ Source Rapi, Modular, Custom Request.</p>
+            </div>
+
+            <div class="divider">══════ ≛ NEXUS – GATE ≛ ══════</div>
+
+            <a href="https://kayzen-izumi.vercel.app" class="link-btn" target="_blank">
+                <span>⦿ WEB PORTAL</span><span>↗</span>
+            </a>
+            <a href="mailto:kayzz.my@gmail.com" class="link-btn" target="_blank">
+                <span>⦿ MAIL SERVER</span><span>@</span>
+            </a>
+            <a href="https://tiktok.com/@sczkayzen" class="link-btn" target="_blank">
+                <span>⦿ TIKTOK LINK</span><span>♪</span>
+            </a>
+            <a href="https://instagram.com/scz_kayzen" class="link-btn" target="_blank">
+                <span>⦿ INSTAGRAM</span><span>📷</span>
+            </a>
+            <a href="https://github.com/Kayzen-dev-tech" class="link-btn" target="_blank">
+                <span>⦿ GITHUB REPO</span><span>{ }</span>
+            </a>
+
+            <div class="footer-status">
+                <div>⇌ sys://CORE-LINK  = <span style="color:#0f0">ONLINE</span></div>
+                <div>⇌ process://NEURAL-THREADS = <span style="color:#0f0">ACTIVE</span></div>
+                <div>⇌ status://SHELL  = VIBRATING AT 327Hz <span class="blink">_</span></div>
+                <br>
+                <center>© 2025 KAYZEN IZUMI // XENOTECH</center>
+            </div>
+
+        </div> 
+    </div>
+
+</body>
+</html>
